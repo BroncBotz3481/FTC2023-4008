@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.BaseCode.New;
+package org.firstinspires.ftc.teamcode;
 
 import android.text.method.Touch;
 
@@ -8,8 +8,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Light;
 import com.qualcomm.robotcore.hardware.TouchSensor;
-
-import org.firstinspires.ftc.teamcode.BaseCode.New.Team4008HMNew;
 
 @TeleOp(name="Team4008TeleOpNew", group="4008")
 public class Team4008TeleOpNew extends LinearOpMode

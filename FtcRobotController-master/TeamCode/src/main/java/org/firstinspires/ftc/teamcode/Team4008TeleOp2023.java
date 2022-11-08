@@ -1,12 +1,10 @@
-package org.firstinspires.ftc.teamcode.BaseCode;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import android.text.method.Touch;
 import com.qualcomm.robotcore.hardware.TouchSensor;
-import org.firstinspires.ftc.teamcode.BaseCode.New.Team4008HMNew;
-import org.firstinspires.ftc.teamcode.BaseCode.New.Team4008TeleOpNew;
 
 public class Team4008TeleOp2023 {
     @TeleOp(name = "Team4008TeleOp2023", group = "4008")
