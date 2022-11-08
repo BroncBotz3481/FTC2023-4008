@@ -16,11 +16,13 @@ public class New2023HM4008 {
     public DcMotor Elevator = null;
     public Servo Intake = null;
 
-    HardwareMap hwMap =  null;
+
+
     //public ElapsedTime period  = new ElapsedTime();
 
     // public Team4008HMNew() {}
 
+    HardwareMap hwMap = null;
     //FIX AND USE IT
     public void Map(HardwareMap hardwareMap)
     {
@@ -52,13 +54,13 @@ public class New2023HM4008 {
         Turret = hwMap.get(DcMotor.class,"Turret");
         Turret.setDirection(DcMotorSimple.Direction.REVERSE);
         Turret.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        Turret = hwMap.get(DcMotor.class, "TurretWheel");
         //IntakeLift.setDirection(DcMotor.Direction.REVERSE);
 
-
+        Elevator = hwMap.get(DcMotor.class, "Elevator");
         Elevator.setDirection(DcMotorSimple.Direction.REVERSE);
         Elevator.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
+        Intake = hwMap.get(Servo.class, "Intake");
     }
 }
