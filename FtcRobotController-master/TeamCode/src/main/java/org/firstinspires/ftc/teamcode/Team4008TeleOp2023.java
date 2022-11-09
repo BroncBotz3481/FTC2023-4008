@@ -88,9 +88,9 @@ public class Team4008TeleOp2023 extends LinearOpMode {
             }
 
             if(gamepad1.a){
-                robot.Intake.setPosition(0.5); //y
-            } else {
-                robot.Intake.setPosition(0); //x
+                robot.Intake.setPower(0.5); //y
+            } else if(gamepad1.b){
+                robot.Intake.setPower(-0.5); //x
             }
         }
     }
