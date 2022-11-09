@@ -3,13 +3,11 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import android.text.method.Touch;
-import com.qualcomm.robotcore.hardware.TouchSensor;
 
 
 @TeleOp(name = "Team4008TeleOp2023", group = "4008")
 public class Team4008TeleOp2023 extends LinearOpMode {
-    New2023HM4008 robot = new New2023HM4008();
+    Team4008HM2023 robot = new Team4008HM2023();
 
 
     @Override

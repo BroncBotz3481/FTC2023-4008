@@ -1,50 +1,39 @@
 package org.firstinspires.ftc.teamcode;
 
-
-import com.qualcomm.hardware.rev.RevBlinkinLedDriver;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.TouchSensor;
 
-import static java.lang.Thread.sleep;
-
-
-public class Team4008HMNew
-{
-
+public class Team4008HM2023 {
     public DcMotor DriveRightBack = null;
     public DcMotor DriveLeftBack = null;
     public DcMotor DriveLeftFront = null;
     public DcMotor DriveRightFront = null;
 
-    public DcMotor Intake = null;
-    public DcMotor IntakeWheel = null;
-    public DcMotor DuckLeft = null;
-    public DcMotor DuckRight = null;
+    public DcMotor Turret = null;
+    public DcMotor Elevator = null;
+    public Servo Intake = null;
 
-    TouchSensor Touch;
-    //public Servo Capper = null;
-    public Servo NewCapper = null;
-   // public RevBlinkinLedDriver Lights = null;
-    //MAKE IT
-    HardwareMap hwMap           =  null;
+
+
     //public ElapsedTime period  = new ElapsedTime();
 
-   // public Team4008HMNew() {}
+    // public Team4008HMNew() {}
 
+    HardwareMap hwMap = null;
     //FIX AND USE IT
     public void Map(HardwareMap hardwareMap)
     {
         hwMap = hardwareMap;
-        Touch = hardwareMap.get(TouchSensor.class, "Touch");
         DriveLeftFront = hwMap.get(DcMotor.class,"DriveLeftFront");
         DriveRightFront = hwMap.get(DcMotor.class,"DriveRightFront");
         DriveLeftBack = hwMap.get(DcMotor.class,"DriveLeftBack");
         DriveRightBack = hwMap.get(DcMotor.class,"DriveRightBack");
-        NewCapper = hwMap.get(Servo.class,"NewCapper");
-     //   Lights = hwMap.get(RevBlinkinLedDriver.class,"Lights");
+        //   Lights = hwMap.get(RevBlinkinLedDriver.class,"Lights");
+
+        TouchSensor Touched = null;
 
         DriveLeftFront.setDirection(DcMotor.Direction.FORWARD);
         DriveLeftFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -62,15 +51,16 @@ public class Team4008HMNew
         DriveRightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Intake = hwMap.get(DcMotor.class,"Intake");
-        Intake.setDirection(DcMotorSimple.Direction.REVERSE);
-        Intake.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        IntakeWheel = hwMap.get(DcMotor.class,"IntakeWheel");
+        Turret = hwMap.get(DcMotor.class,"Turret");
+        Turret.setDirection(DcMotorSimple.Direction.REVERSE);
+        Turret.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         //IntakeLift.setDirection(DcMotor.Direction.REVERSE);
 
-        DuckLeft = hwMap.get(DcMotor.class,"DuckLeft");
-        DuckRight = hwMap.get(DcMotor.class,"DuckRight");
-        DuckRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        Elevator = hwMap.get(DcMotor.class, "Elevator");
+        Elevator.setDirection(DcMotorSimple.Direction.REVERSE);
+        Elevator.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
+        Intake = hwMap.get(Servo.class, "Intake");
     }
 }
