@@ -32,10 +32,7 @@ public class Team4008TeleOp2023 extends LinearOpMode {
 
         while (opModeIsActive()) {
             boolean speedslow = gamepad1.right_bumper;
-            double mag = speedslow ? 0.75 : 1.0;
-
-            boolean speedslow1 = gamepad1.left_bumper;
-            double mag1 = speedslow1 ? 0.75 : 0.4;
+            double mag = speedslow ? 1.0 : 0.5;
 
             double y = gamepad1.left_stick_y; // Remember, this is reversed!
             double x = -gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
@@ -63,18 +60,18 @@ public class Team4008TeleOp2023 extends LinearOpMode {
             telemetry.addData("LeftBack", robot.DriveLeftBack.getCurrentPosition());
             telemetry.update();
 
-            robot.DriveLeftFront.setPower(frontLeftPower * mag * mag1);
-            robot.DriveLeftBack.setPower(backLeftPower * mag * mag1);
-            robot.DriveRightFront.setPower(frontRightPower * mag * mag1);
-            robot.DriveRightBack.setPower(backRightPower * mag * mag1);
+            robot.DriveLeftFront.setPower(frontLeftPower * mag);
+            robot.DriveLeftBack.setPower(backLeftPower * mag);
+            robot.DriveRightFront.setPower(frontRightPower * mag);
+            robot.DriveRightBack.setPower(backRightPower * mag);
 
-            double TurretPower = gamepad2.left_stick_x*0.5;
+            double TurretPower = gamepad2.right_stick_x*0.5;
             double ElevatorPower = gamepad2.left_stick_y;
             robot.Turret.setPower(TurretPower);
-            robot.Elevator.setPower(ElevatorPower);
+            robot.Elevator.setPower(-ElevatorPower);
 
             if (gamepad2.a){
-                robot.Intake.setPosition(1);
+                robot.Intake.setPosition(0.4);
             }
             else {
                 robot.Intake.setPosition(0);
