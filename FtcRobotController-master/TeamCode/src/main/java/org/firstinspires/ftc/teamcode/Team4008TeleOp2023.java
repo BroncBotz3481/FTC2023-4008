@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 
 @TeleOp(name = "Team4008TeleOp2023", group = "4008")
@@ -24,7 +25,7 @@ public class Team4008TeleOp2023 extends LinearOpMode {
         robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         //robot.Intake.setPosition(0);
-        robot.Intake.setPosition(1); //default open position, x
+        robot.Intake.setPosition(0.5); //default open position, x
 
         //robot.Lights.setPattern(RevBlinkinLedDriver.BlinkinPattern.BEATS_PER_MINUTE_PARTY_PALETTE);
         waitForStart();
@@ -67,30 +68,24 @@ public class Team4008TeleOp2023 extends LinearOpMode {
             robot.DriveRightFront.setPower(frontRightPower * mag * mag1);
             robot.DriveRightBack.setPower(backRightPower * mag * mag1);
 
-            if (gamepad2.b){
-                robot.Turret.setPower(0.5);
-            }
-            else if (gamepad2.a){
-                robot.Turret.setPower(-0.5);
-            }
-            else{
-                robot.Turret.setPower(0);
+            double TurretPower = gamepad2.left_stick_x*0.5;
+            double ElevatorPower = gamepad2.left_stick_y;
+            robot.Turret.setPower(TurretPower);
+            robot.Elevator.setPower(ElevatorPower);
+
+
+            if(gamepad2.a){
+                robot.Intake.setPosition(1.0); //y
+            } else if(gamepad2.b){
+                robot.Intake.setPosition(0.0); //x
             }
 
-            if (gamepad2.x){
-                robot.Elevator.setPower(0.5);
-            }
-            else if (gamepad2.y){
-                robot.Elevator.setPower(-0.5);
-            }
-            else{
-                robot.Elevator.setPower(0);
-            }
-
-            if(gamepad1.a){
-                robot.Intake.setPower(0.5); //y
-            } else if(gamepad1.b){
-                robot.Intake.setPower(-0.5); //x
+            if(gamepad2.x){
+                robot.Arm.setPower(0.8);
+            } else if (gamepad2.y){
+                robot.Arm.setPower(-0.5);
+            } else {
+                robot.Arm.setPower(0);
             }
         }
     }

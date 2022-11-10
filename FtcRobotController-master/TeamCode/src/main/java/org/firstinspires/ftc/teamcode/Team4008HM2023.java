@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.CRServo;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.TouchSensor;
 
 public class Team4008HM2023 {
@@ -14,7 +15,9 @@ public class Team4008HM2023 {
 
     public DcMotor Turret = null;
     public DcMotor Elevator = null;
-    public CRServo Intake = null;
+
+    public DcMotor Arm = null;
+    public Servo Intake = null;
 
 
 
@@ -61,6 +64,8 @@ public class Team4008HM2023 {
         Elevator.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Intake = hwMap.get(CRServo.class, "Intake");
+        Intake = hwMap.get(Servo.class, "Intake");
+
+        Arm = hwMap.get(DcMotor.class, "Arm");
     }
 }
