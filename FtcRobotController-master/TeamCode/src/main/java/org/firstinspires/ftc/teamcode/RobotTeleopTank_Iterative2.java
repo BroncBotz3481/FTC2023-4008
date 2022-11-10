@@ -50,7 +50,7 @@ import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name="Robot: Teleop Tank", group="Robot")
 public class RobotTeleopTank_Iterative2 extends OpMode{
-    New2023HM4008 robot = new New2023HM4008();
+    Team4008HM2023 robot = new Team4008HM2023();
 
     /* Declare OpMode members. */
     public DcMotor DriveLeftFront = null;
