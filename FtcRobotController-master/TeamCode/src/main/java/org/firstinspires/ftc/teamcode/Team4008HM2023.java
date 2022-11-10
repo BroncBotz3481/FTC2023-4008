@@ -36,8 +36,6 @@ public class Team4008HM2023 {
         DriveRightBack = hwMap.get(DcMotor.class,"DriveRightBack");
         //   Lights = hwMap.get(RevBlinkinLedDriver.class,"Lights");
 
-        //TouchSensor Touched = null;
-
         DriveLeftFront.setDirection(DcMotor.Direction.FORWARD);
         DriveLeftFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);

@@ -24,8 +24,8 @@ public class Team4008TeleOp2023 extends LinearOpMode {
         robot.DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        //robot.Intake.setPosition(0);
-        robot.Intake.setPosition(0.5); //default open position, x
+        robot.Intake.setPosition(0);
+        robot.Intake.setPosition(1);
 
         //robot.Lights.setPattern(RevBlinkinLedDriver.BlinkinPattern.BEATS_PER_MINUTE_PARTY_PALETTE);
         waitForStart();
@@ -35,7 +35,7 @@ public class Team4008TeleOp2023 extends LinearOpMode {
             double mag = speedslow ? 0.75 : 1.0;
 
             boolean speedslow1 = gamepad1.left_bumper;
-            double mag1 = speedslow1 ? 1.0 : 1.0;
+            double mag1 = speedslow1 ? 0.75 : 0.4;
 
             double y = gamepad1.left_stick_y; // Remember, this is reversed!
             double x = -gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
@@ -73,18 +73,21 @@ public class Team4008TeleOp2023 extends LinearOpMode {
             robot.Turret.setPower(TurretPower);
             robot.Elevator.setPower(ElevatorPower);
 
-
-            if(gamepad2.a){
-                robot.Intake.setPosition(1.0); //y
-            } else if(gamepad2.b){
-                robot.Intake.setPosition(0.0); //x
+            if (gamepad2.a){
+                robot.Intake.setPosition(1);
             }
+            else {
+                robot.Intake.setPosition(0);
+            }
+
 
             if(gamepad2.x){
                 robot.Arm.setPower(0.8);
-            } else if (gamepad2.y){
+            }
+            else if (gamepad2.y){
                 robot.Arm.setPower(-0.5);
-            } else {
+            }
+            else {
                 robot.Arm.setPower(0);
             }
         }
