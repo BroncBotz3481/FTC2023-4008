@@ -56,3 +56,14 @@ jobs:
     # Runs a single command using the runners shell
     - name: Compile and run tests on robot code
       run: ./gradlew build
+     
+    # Upload lint report
+    - uses: actions/upload-artifact@v3
+      with:
+        name: lint_report
+        path: TeamCode/build/reports/
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: apk
+        path: TeamCode/build/outputs/apk/
