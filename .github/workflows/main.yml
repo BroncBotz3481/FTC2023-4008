@@ -21,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
     - name: Install tools
-      run: apt update && apt install -y unzip
+      run: apt update && apt install -y unzip binutils-arm-linux-gnueabi
       
     - name: Setup Android NDK
       uses: nttld/setup-ndk@v1
