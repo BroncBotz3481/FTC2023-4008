@@ -60,10 +60,10 @@ jobs:
     # Upload lint report
     - uses: actions/upload-artifact@v3
       with:
-        name: lint_report.zip
+        name: lint_report
         path: TeamCode/build/reports/
 
     - uses: actions/upload-artifact@v3
       with:
-        name: apk.zip
+        name: apk
         path: TeamCode/build/outputs/apk/
