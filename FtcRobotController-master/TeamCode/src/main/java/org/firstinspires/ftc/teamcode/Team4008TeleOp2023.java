@@ -31,7 +31,7 @@ public class Team4008TeleOp2023 extends LinearOpMode {
 
         while (opModeIsActive()) {
             boolean speedslow = gamepad1.right_bumper;
-            double mag = speedslow ? 1.0 : 0.5;
+            double mag = speedslow ? 0.5 : 1.0;
 
             double y = gamepad1.left_stick_y; // Remember, this is reversed!
             double x = -gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
