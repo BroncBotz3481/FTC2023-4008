@@ -103,7 +103,7 @@ public class Team4008TESTSensorColor extends LinearOpMode {
         boolean bCurrState = false;
 
         // Get a reference to our sensor object.
-        colorSensor = hardwareMap.get(NormalizedColorSensor.class, "sensor");
+        colorSensor = hardwareMap.get(NormalizedColorSensor.class, "Sensor");
 
         // If possible, turn the light on in the beginning (it might already be on anyway,
         // we just make sure it is if we can).

@@ -6,6 +6,9 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.TouchSensor;
+import com.qualcomm.robotcore.hardware.NormalizedColorSensor;
+import com.qualcomm.robotcore.hardware.NormalizedRGBA;
+import com.qualcomm.robotcore.hardware.SwitchableLight;
 
 public class Team4008HM2023 {
     public DcMotor DriveRightBack = null;
@@ -18,6 +21,8 @@ public class Team4008HM2023 {
 
     public DcMotor Arm = null;
     public Servo Intake = null;
+
+    public NormalizedColorSensor ColorSensor = null;
 
 
 
@@ -65,5 +70,8 @@ public class Team4008HM2023 {
         Intake = hwMap.get(Servo.class, "Intake");
 
         Arm = hwMap.get(DcMotor.class, "Arm");
+
+        ColorSensor = hwMap.get(NormalizedColorSensor.class, "Sensor");
+
     }
 }
