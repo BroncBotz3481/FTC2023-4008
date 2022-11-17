@@ -71,7 +71,7 @@ public class Team4008HM2023 {
 
         Arm = hwMap.get(DcMotor.class, "Arm");
 
-        ColorSensor = hwMap.get(NormalizedColorSensor.class, "Sensor");
+        ColorSensor = hwMap.get(NormalizedColorSensor.class, "sensor");
 
     }
 }
