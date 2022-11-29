@@ -49,7 +49,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         robot.DriveLeftFront.setPower(-multy);
         robot.DriveRightBack.setPower(-multy);
         robot.DriveLeftBack.setPower(-multy);
-        while(opModeIsActive() && Time.milliseconds() < 4500 && robot.DriveLeftFront.getCurrentPosition() < tick) {
+        while(opModeIsActive() && Time.milliseconds() < 4200 && robot.DriveLeftFront.getCurrentPosition() < tick) {
             telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
            // telemetry.update();
         }
@@ -132,7 +132,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         robot.DriveLeftFront.setPower(-multy);
         robot.DriveRightBack.setPower(-multy);
         robot.DriveLeftBack.setPower(-multy);
-        while(opModeIsActive() && Time.milliseconds() < 2000 && robot.DriveLeftFront.getCurrentPosition() < tick) {
+        while(opModeIsActive() && Time.milliseconds() < 1500 && robot.DriveLeftFront.getCurrentPosition() < tick) {
             telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
             //telemetry.update();
         }
@@ -156,7 +156,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
             robot.DriveLeftFront.setPower(multy);
             robot.DriveRightBack.setPower(multy);
             robot.DriveLeftBack.setPower(-multy);
-            while(opModeIsActive() && Time.milliseconds() < 2000 && robot.DriveLeftFront.getCurrentPosition() < tick) {
+            while(opModeIsActive() && Time.milliseconds() < 1750 && robot.DriveLeftFront.getCurrentPosition() < tick) {
                 telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
                 //telemetry.update();
             }
@@ -180,7 +180,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
             robot.DriveLeftFront.setPower(-multy);
             robot.DriveRightBack.setPower(-multy);
             robot.DriveLeftBack.setPower(multy);
-            while(opModeIsActive() && Time.milliseconds() < 2000 && robot.DriveLeftFront.getCurrentPosition() < tick) {
+            while(opModeIsActive() && Time.milliseconds() < 1750 && robot.DriveLeftFront.getCurrentPosition() < tick) {
                 telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
                 //telemetry.update();
             }
@@ -193,7 +193,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
             sleep(1000);
 
             //Back
-            distance = 20;
+            /*distance = 20;
             multy = 0.25;
             // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -213,7 +213,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
             robot.DriveLeftBack.setPower(0);
             //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-            sleep(1000);
+            sleep(1000); */
         }
     }
 }
