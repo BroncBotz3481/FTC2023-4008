@@ -24,8 +24,6 @@ public class Team4008TeleOp2023 extends LinearOpMode {
         robot.DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        robot.IntakeLeft.setPosition(0.3);
-        robot.IntakeRight.setPosition(1);
 
         //robot.Lights.setPattern(RevBlinkinLedDriver.BlinkinPattern.BEATS_PER_MINUTE_PARTY_PALETTE);
         waitForStart();
@@ -69,14 +67,14 @@ public class Team4008TeleOp2023 extends LinearOpMode {
             double ElevatorPower = gamepad2.left_stick_y;
             robot.Turret.setPower(TurretPower);
             robot.Elevator.setPower(-ElevatorPower);
-
+            // a is open, b is close
             if (gamepad2.a) {
-                robot.IntakeRight.setPosition(0.9);
+                robot.IntakeRight.setPosition(0.35);
                 robot.IntakeLeft.setPosition(0.4);
             }
             if (gamepad2.b){
-                robot.IntakeRight.setPosition(1);
-                robot.IntakeLeft.setPosition(0.3);
+                robot.IntakeRight.setPosition(0.25);
+                robot.IntakeLeft.setPosition(0.5);
             }
 
             if(gamepad2.y){
