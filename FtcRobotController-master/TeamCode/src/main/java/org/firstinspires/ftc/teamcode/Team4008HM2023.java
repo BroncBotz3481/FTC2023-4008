@@ -21,7 +21,6 @@ public class Team4008HM2023 {
 
     public DcMotor Arm = null;
 
-    public Servo IntakeRight = null;
     public Servo IntakeLeft = null;
 
     public NormalizedColorSensor ColorSensor = null;
@@ -70,7 +69,6 @@ public class Team4008HM2023 {
         Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         IntakeLeft = hwMap.get(Servo.class, "Servo1");
-        IntakeRight = hwMap.get(Servo.class,"Servo2");
 
         Arm = hwMap.get(DcMotor.class, "Arm");
 
