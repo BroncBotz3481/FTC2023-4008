@@ -11,9 +11,9 @@ import com.qualcomm.robotcore.hardware.NormalizedRGBA;
 import com.qualcomm.robotcore.hardware.SwitchableLight;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@Autonomous(name="Team4008Auto1VisionPark", group="4008")
+@Autonomous(name="Team4008AutoVisionConePark", group="4008")
 
-public class Team4008Auto1VisionPark extends LinearOpMode{
+public class Team4008AutoVisionConePark extends LinearOpMode{
 
 
     Team4008HM2023 robot = new Team4008HM2023();
@@ -41,8 +41,8 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         //Drive forward
         distance = 20;
         multy = 0.18;
-       // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-      //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         tick = (distance * 537.7)/(4 * Math.PI);
         Time.reset();
         robot.DriveRightFront.setPower(multy);
@@ -51,14 +51,14 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         robot.DriveLeftBack.setPower(multy);
         while(opModeIsActive() && Time.milliseconds() < 3200) {
             telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
-           // telemetry.update();
+            // telemetry.update();
         }
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
         robot.DriveLeftBack.setPower(0);
-      //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-      //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         sleep(1500);
 
         Time.reset();
@@ -148,8 +148,8 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
             //Strafe Left
             distance = 20;
             multy = 0.35;
-           // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-          //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             tick = (distance * 537.7)/(4 * Math.PI);
             Time.reset();
             robot.DriveRightFront.setPower(-multy);
@@ -164,8 +164,8 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
             robot.DriveLeftFront.setPower(0);
             robot.DriveRightBack.setPower(0);
             robot.DriveLeftBack.setPower(0);
-          //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-          //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             sleep(1500);
         }
         else if (OPG == 3){
