@@ -132,7 +132,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         robot.DriveLeftFront.setPower(multy);
         robot.DriveRightBack.setPower(multy);
         robot.DriveLeftBack.setPower(multy);
-        while(opModeIsActive() && Time.milliseconds() < 1500) {
+        while(opModeIsActive() && Time.milliseconds() < 1300) {
             telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
             //telemetry.update();
         }
@@ -147,15 +147,15 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         if(OPG == 1){
             //Strafe Left
             distance = 20;
-            multy = 0.35;
+            multy = 0.30;
            // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
           //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             tick = (distance * 537.7)/(4 * Math.PI);
             Time.reset();
-            robot.DriveRightFront.setPower(-multy);
-            robot.DriveLeftFront.setPower(multy);
-            robot.DriveRightBack.setPower(multy);
-            robot.DriveLeftBack.setPower(-multy);
+            robot.DriveRightFront.setPower(+multy);
+            robot.DriveLeftFront.setPower(-multy);
+            robot.DriveRightBack.setPower(-multy);
+            robot.DriveLeftBack.setPower(multy);
             while(opModeIsActive() && Time.milliseconds() < 2100) {
                 telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
                 //telemetry.update();
@@ -171,15 +171,15 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         else if (OPG == 3){
             //Strafe Right
             distance = 20;
-            multy = 0.35;
+            multy = 0.30;
             // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             tick = (distance * 537.7)/(4 * Math.PI);
             Time.reset();
-            robot.DriveRightFront.setPower(multy);
-            robot.DriveLeftFront.setPower(-multy);
-            robot.DriveRightBack.setPower(-multy);
-            robot.DriveLeftBack.setPower(multy);
+            robot.DriveRightFront.setPower(-multy);
+            robot.DriveLeftFront.setPower(multy);
+            robot.DriveRightBack.setPower(multy);
+            robot.DriveLeftBack.setPower(-multy);
             while(opModeIsActive() && Time.milliseconds() < 2100) {
                 telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
                 //telemetry.update();
