@@ -49,7 +49,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         robot.DriveLeftFront.setPower(multy);
         robot.DriveRightBack.setPower(multy);
         robot.DriveLeftBack.setPower(multy);
-        while(opModeIsActive() && Time.milliseconds() < 3200) {
+        while(opModeIsActive() && Time.milliseconds() < 3800) {
             telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
            // telemetry.update();
         }
@@ -123,7 +123,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         }
         //Drive forward
         distance = 20;
-        multy = 0.18;
+        multy = 0.25;
         //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         tick = (distance * 537.7)/(4 * Math.PI);
@@ -132,7 +132,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         robot.DriveLeftFront.setPower(multy);
         robot.DriveRightBack.setPower(multy);
         robot.DriveLeftBack.setPower(multy);
-        while(opModeIsActive() && Time.milliseconds() < 1100) {
+        while(opModeIsActive() && Time.milliseconds() < 1500) {
             telemetry.addData("Encoder Val", robot.DriveLeftFront.getCurrentPosition());
             //telemetry.update();
         }
