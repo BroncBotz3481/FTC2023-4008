@@ -40,7 +40,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
 
         //Drive forward
         distance = 20;
-        multy = 0.18;
+        multy = 0.25;
        // robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
       //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         tick = (distance * 537.7)/(4 * Math.PI);
@@ -123,7 +123,7 @@ public class Team4008Auto1VisionPark extends LinearOpMode{
         }
         //Drive forward
         distance = 20;
-        multy = 0.15;
+        multy = 0.18;
         //  robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         //  robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         tick = (distance * 537.7)/(4 * Math.PI);
